@@ -1,0 +1,118 @@
+body {
+	background-color: #000;
+}
+
+.head {
+	text-align: center;
+	font-size: 42px;
+	margin-top: 5%;
+	color: #fff;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	height: 300px;
+	width: 300px;
+	margin: 30px auto;
+}
+
+.main div {
+	display: flex;
+	height: 100px;
+	width: 100px;
+	font-size: 60px;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-around;
+	color: #fff;
+}
+
+.top-left, .top-middle, .top-right, .middle-left, .middle-middle, .middle-right {
+	border-bottom: 2px solid #fff
+}
+
+.top-left, .middle-left, .bottom-left, .top-middle, .middle-middle, .bottom-middle {
+	border-right: 2px solid #fff;
+}
+
+.top-line, .middle-line, .bottom-line {
+	display: none;
+	position: relative;
+	height: 1px;
+	width: 275px;
+	border: 2px solid #fff;
+	margin: 0 auto;
+}
+
+.top-line {
+	top: -320px;
+}
+
+.middle-line {
+	top: -222px;
+}
+
+.bottom-line {
+	top: -124px;
+}
+
+.vertical-line {
+	display: none;
+	position: relative;
+	height: 275px;
+	width: 1px;
+	border: 2px solid #fff;
+	margin: 0 auto;
+	top: -360px;
+}
+
+.slash-line {
+	display: none;
+	position: relative;
+	height: 330px;
+	width: 1px;
+	border: 2px solid #fff;
+	transform: rotate(45deg);
+	margin: 0 auto;
+	top: -387px;
+}
+
+.home-buttons {
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: -250px;
+}
+
+.select-players {
+	color: #000;
+	background-color: grey;
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding-top: 16px;
+}
+
+.home-buttons button {
+	padding: 20px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: grey;
+}
+
+.restart-container {
+	text-align: center;
+}
+
+.new-game {
+	padding: 10px;
+	background-color: grey;
+	border-radius: 5px;
+	width: 100px;
+}
+
+
+
+

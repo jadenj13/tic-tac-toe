@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+	<title>Tic-Tac-Toe</title>
+</head>
+<body>
+	
+	<h1 class="head">Tic-Tac-Toe</h1>
+
+	<ui-view></ui-view>
+
+	<div class="top-line"></div>
+	<div class="middle-line"></div>
+	<div class="bottom-line"></div>
+	<div class="vertical-line"></div>
+	<div class="slash-line"></div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="./app/app.js"></script>
+	<script src="./app/onePlayerCtrl.js"></script>
+	<script src="./app/twoPlayerCtrl.js"></script>
+	<script src="./app/mainService.js"></script>
+	<script src="./app/mainDirective.js"></script>
+</body>
+</html>
