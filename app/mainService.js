@@ -2,7 +2,6 @@ angular.module('app')
 .service('mainService', function() {
 
 	var xo = 'X';
-
 	var newGame = false;
 
 	function onClickOnePlayer() {
@@ -21,18 +20,17 @@ angular.module('app')
 	function onClickTwoPlayer() {
 		$('.main div').on('click', function() {
 			if (!$(this).html()) {
-				$(this).html(xo);
-			}
-			
-			if (xo === 'X') {
-				xo = 'O';
-			} else {
-				xo = 'X';
+				$(this).html(xo)
 			}
 			checkForWinner();
-
 		});
+		if (xo === 'X') {
+			xo = 'O';
+		} else if (xo === 'O') {
+			xo = 'X';
+		}
 	}
+
 
 	function resetOnePlayer() {
 		$('.main div').html('');
@@ -126,7 +124,6 @@ angular.module('app')
 	  	var randomSpace = (Math.floor((Math.random() * blankSpaces.length)));
 			  
 	  	blankSpaces[randomSpace].html('O');
-	  	checkForWinner();
 	}
 
 	function smartCompMove() {
@@ -178,16 +175,24 @@ angular.module('app')
 	this.twoPlayer = function() {
 		$(document).ready(function() {
 
-			onClickTwoPlayer();
+			$('.main div').on('click', function() {
+				if (!$(this).html()) {
+					$(this).html(xo)
+				}
+				if (xo === 'X') {
+					xo = 'O';
+				} else {
+					xo = 'X';
+				}
+				checkForWinner();
+			});
 
 			$('.new-game').on('click', function() {
 				resetTwoPlayer();
 			})
 
-
 		});
-
-	}
+	};
 
 });
 
